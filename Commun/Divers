@@ -1,0 +1,29 @@
+## Récupérer tous les mots d'un site web dans une wordlist
+```bash
+$ cewl --depth 5 -w nom_wordlist http://8.8.8.8.fr/
+```
+
+## Info sur un pseudonyme
+```bash
+$ python3 sherlock.py {pseudonyme}
+```
+
+## OSINT, ne pas oublier qu'il existe Maltego et les googles dork
+```bash
+$ theHarvester -d <domain> -l 300 -b all -f output
+```
+
+## Info sur l'ip
+```bash
+$ curl ipinfo.io/{IP]
+```
+
+## Email
+```bash
+$ simplyemail.py -all -e domain.com
+```
+
+## Obtenir un tgt
+```bash
+python3 GetNPUsers.py nom_de_la_machine/ -no-pass -usersfile user.txt
+```

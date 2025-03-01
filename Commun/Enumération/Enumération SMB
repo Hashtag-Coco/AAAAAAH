@@ -1,0 +1,33 @@
+## SAMBA fingerprint version, énumération des dossiers partagés et users
+```bash
+$ smbclient -L //{target}
+$ nmap -p 445 -vv --script=smb-enum-shares.nse,smb-enum-users.nse <ip>
+```
+
+## SAMBA minimal scan / everything
+```bash
+$ enum4linux {target}
+$ enum4linux -a {target}
+```
+
+## SAMBA enumerate users
+```bash
+$ nmap -sU -sS --script=smb-enum-users -p U:137,T:139 {networkAddr/masq}
+```
+
+## Monter un partage smb distant en utilisant CIFS
+```bash
+$ mount-t cifs "//<ip>/<targeted share>/" /mnt 
+$ smbget -R smb://<ip>/<share>/<path>/<file>
+```
+```bash
+$ mkdir Data
+$ mount.cifs //X.X.X.X/Data ./Data -o user=USERNAME
+```
+### Récupérer plusieurs fichiers/dossiers distant
+```bash
+smb > mask ""
+smb > recurse ON
+smb > prompt OFF
+smb > mget *
+```

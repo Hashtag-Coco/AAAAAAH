@@ -1,0 +1,4 @@
+## Probing Neighbors
+```bash
+$ netdiscover -i {interface}
+```
